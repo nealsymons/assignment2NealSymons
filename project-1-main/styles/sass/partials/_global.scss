@@ -1,0 +1,97 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+/* Global & Wrapper Styles */
+
+html {
+    font-family: $lato;
+    background-color: $white;
+    color: $black;
+}
+
+body {
+    font-size: 125%;
+}
+
+header {
+    background-color: $white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+section {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: $black;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+i {
+    margin-right: 20px;
+}
+
+button {
+    background-color: $brown-red;
+    color: $white;
+    border: none;
+    padding: 10px;
+    margin: 0 auto;
+    @include mq('phablet'){
+        width: 30%;
+    }
+}
+
+.header-contact,
+.header-blog {
+    height: 80vh;
+    @include mq('tablet-wide'){
+        height: 100vh;
+    }
+    h1 {
+    position: absolute;
+    top: 35vh;
+    margin: 0 auto;
+    text-transform: uppercase;
+    @include mq('tablet-wide'){
+        display: flex;
+        justify-content: center;
+        }
+    }
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
