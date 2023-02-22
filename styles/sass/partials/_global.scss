@@ -56,16 +56,6 @@ i {
     margin-right: 20px;
 }
 
-button {
-    background-color: $brown-red;
-    color: $white;
-    border: none;
-    padding: 10px;
-    margin: 0 auto;
-    @include mq('phablet'){
-        width: 30%;
-    }
-}
 
 .header-contact,
 .header-blog {

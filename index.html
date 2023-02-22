@@ -1,3 +1,6 @@
+<!-- used Dave Tyson's (https://github.com/davetyson) project1 as a base since my project1 was incomplete -->
+<!-- used the youtube tutorial -https://youtu.be/MBaw_6cPmAw- by Wev Dev Simplified for building my popout modal -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +25,17 @@
                 <div class="logo">
                     <p>Shoe</p>
                     <p>Kloset</p>
+                    <button data-modal-target="#modal">Open Modal</button>
+                    <div class="modal active" id="modal">
+                        <div class="modalHeader">
+                            <div class="title">Example Modal</div>
+                            <button data-close-button class="closeButton">&times;</button>
+                        </div>
+                        <div class="modalBody">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam itaque nostrum, laborum vero dignissimos reprehenderit quibusdam debitis cumque dolores illo ab deleniti blanditiis vitae reiciendis optio veritatis, velit necessitatibus incidunt atque? Deleniti recusandae a consequatur molestiae animi sint vel, unde expedita. Eos incidunt doloremque dolores libero. Similique odit earum placeat maiores consequuntur minus excepturi eligendi culpa ad, eius, ullam a reiciendis? Quos architecto nostrum iste necessitatibus officia tenetur cum temporibus numquam tempore modi perferendis veniam eos ut est obcaecati asperiores ad, nam rerum officiis quidem?
+                        </div>
+                    </div>
+                    <div id="overlay"></div>
                 </div>
                 <nav class="main-nav">
                     <ul>
@@ -164,5 +178,6 @@
     <footer>
         <p>Copyright © 2023 Juno College</p>
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>

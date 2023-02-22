@@ -282,19 +282,6 @@ i {
   margin-right: 20px;
 }
 
-button {
-  background-color: #882C07;
-  color: #FFF;
-  border: none;
-  padding: 10px;
-  margin: 0 auto;
-}
-@media only screen and (min-width: 560px) {
-  button {
-    width: 30%;
-  }
-}
-
 .header-contact,
 .header-blog {
   height: 80vh;
@@ -551,6 +538,76 @@ button {
 .hamburger-wrap:focus ul {
   display: inline-block;
   z-index: 2;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  border: 3px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+}
+
+.modal.active {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.modalHeader {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modalHeader.title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modalHeader.closeButton {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modalBody {
+  padding: 10px;
+}
+
+#overlay {
+  position: fixed;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 /* Footer styles */
